@@ -1,6 +1,9 @@
 package gtic.app;
 
+import java.awt.CardLayout;
 import java.awt.Color;
+import javax.swing.JButton;
+
 
 public class JFormAdmin extends javax.swing.JFrame {
 
@@ -10,6 +13,7 @@ public class JFormAdmin extends javax.swing.JFrame {
     public JFormAdmin() {
         initComponents();
         setLocationRelativeTo(null);
+        jPanel11.setLayout(new CardLayout());
     }
 
     /**
@@ -114,6 +118,9 @@ public class JFormAdmin extends javax.swing.JFrame {
         jCheckBox1 = new javax.swing.JCheckBox();
         jCheckBox2 = new javax.swing.JCheckBox();
         jPanel9 = new javax.swing.JPanel();
+        jButton16 = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
+        jPanel11 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton14 = new javax.swing.JButton();
         jButton15 = new javax.swing.JButton();
@@ -925,20 +932,63 @@ public class JFormAdmin extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Virtuous Loop", jPanel2);
 
+        jButton16.setText("Create");
+        jButton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton16ActionPerformed(evt);
+            }
+        });
+
+        jLabel7.setText("Please click here to create new framework");
+
+        jPanel11.setBackground(new java.awt.Color(102, 102, 102));
+
+        org.jdesktop.layout.GroupLayout jPanel11Layout = new org.jdesktop.layout.GroupLayout(jPanel11);
+        jPanel11.setLayout(jPanel11Layout);
+        jPanel11Layout.setHorizontalGroup(
+            jPanel11Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(0, 0, Short.MAX_VALUE)
+        );
+        jPanel11Layout.setVerticalGroup(
+            jPanel11Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(0, 460, Short.MAX_VALUE)
+        );
+
         org.jdesktop.layout.GroupLayout jPanel9Layout = new org.jdesktop.layout.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
             jPanel9Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 574, Short.MAX_VALUE)
+            .add(jPanel9Layout.createSequentialGroup()
+                .add(jPanel9Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(jPanel9Layout.createSequentialGroup()
+                        .add(jPanel9Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                            .add(jPanel9Layout.createSequentialGroup()
+                                .add(144, 144, 144)
+                                .add(jLabel7))
+                            .add(jPanel9Layout.createSequentialGroup()
+                                .add(245, 245, 245)
+                                .add(jButton16)))
+                        .add(0, 161, Short.MAX_VALUE))
+                    .add(jPanel9Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .add(jPanel11, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 589, Short.MAX_VALUE)
+            .add(jPanel9Layout.createSequentialGroup()
+                .add(33, 33, 33)
+                .add(jLabel7)
+                .add(29, 29, 29)
+                .add(jPanel11, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(jButton16)
+                .add(16, 16, 16))
         );
 
         jTabbedPane1.addTab("tab3", jPanel9);
 
-        jButton1.setText("Log Out");
+        jButton1.setText("Logout");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -1532,7 +1582,82 @@ public class JFormAdmin extends javax.swing.JFrame {
         });
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    //---main
+    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+        /*
+        //hide new edition menu
+        jLabel7.setVisible(false);
+        jButton16.setVisible(false);
+        //----------------------
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new MakeEditor().setVisible(true);
+            }
+        });
+        
+        */
+        
+        
+
+        int r = 100;
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 2; j++) {
+                JButton tmp = new JButton(""+i);
+                tmp.setSize(50, r);
+                jPanel11.add(tmp);
+                r= r-20;
+                System.out.println("pone 1");
+            }
+            
+        }
+        
+        
+        
+        /*
+        Object action;
+        if (jButton1.getText().equals("Logout")) {
+            //Si esta en ingles
+            action = JOptionPane.showInputDialog(rootPane, "Select row number",
+                "dFogit Editor", JOptionPane.QUESTION_MESSAGE, null,
+                seleccion,
+                seleccion[0]
+            );
+        }else if(jButton1.getText().equals("Cerrar sesion")){
+            //Si esta en castellano
+            action = JOptionPane.showInputDialog(rootPane, "Seleccionar numero de filas",
+                "dFogit Editor", JOptionPane.QUESTION_MESSAGE, null,
+                seleccion,
+                seleccion[0]
+            );
+        }
+        //hide new edition menu
+        jLabel7.setVisible(false);
+        jButton16.setVisible(false);
+        //----------------------
+        switch (Integer.parseInt(seleccion.toString())) {
+            case 1:
+                System.out.println("1 row");
+                jPanel9.
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            case 5:
+                break;
+            case 6:
+                break;
+                
+            default:
+                throw new AssertionError();
+        }
+        
+        
+        */
+        
+    }//GEN-LAST:event_jButton16ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.Box.Filler filler1;
@@ -1544,6 +1669,7 @@ public class JFormAdmin extends javax.swing.JFrame {
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton15;
+    private javax.swing.JButton jButton16;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton26;
     private javax.swing.JButton jButton27;
@@ -1606,6 +1732,7 @@ public class JFormAdmin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel56;
     private javax.swing.JLabel jLabel57;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JMenu jMenu1;
@@ -1615,6 +1742,7 @@ public class JFormAdmin extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel17;
     private javax.swing.JPanel jPanel18;
@@ -1628,7 +1756,7 @@ public class JFormAdmin extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
-    private javax.swing.JPanel jPanel9;
+    public javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JSeparator jSeparator1;

@@ -57,6 +57,9 @@ public class Login extends javax.swing.JFrame {
 
         jLabel3.setText("Password");
 
+        jTextField1.setText("admin");
+        jTextField1.setToolTipText("");
+
         jButton1.setText("Login");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -79,6 +82,8 @@ public class Login extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
+
+        jPasswordField1.setText("dfogit2019");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
